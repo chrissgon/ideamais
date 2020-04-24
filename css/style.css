@@ -25,6 +25,76 @@
 }
 
 .menu .links a {
+    color: #2E4F66;
     cursor: pointer;
     margin: 0 15px;
+}
+
+/* HOME */
+.home {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 75px 0;
+}
+
+/* illustratin */
+.home .illustration {
+    position: absolute;
+    transform: translate(60%, -350px);
+    z-index: -1;
+}
+
+.home .illustration img {
+    width: 1000px;
+}
+
+/* info */
+.home .info {
+    width: 50%;
+    padding: 0 50px;
+}
+
+.home .info h3 {
+    font-size: 1.3rem;
+    color: #2E4F66;
+}
+
+.home .info h1 {
+    font-size: 1.9rem;
+    color: #2E4F66;
+    margin-top: 50px;
+}
+
+.home .info h1::before {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 2px;
+    background: #E74C3C;
+    border-radius: 100px;
+}
+
+.home .info h1 strong {
+    color: #E74C3C;
+}
+
+/* buttons */
+.home .info .buttons {
+    flex-direction: row;
+    margin-top: 30px;
+}
+
+.home .info .buttons a {
+    font-size: .9rem;
+    font-weight: 500;
+    color: #fff;
+    background: #2E4F66;
+    border-radius: 100px;
+    padding: 12px 27px;
+}
+
+.home .info .buttons a:nth-child(2) {
+    background: #E74C3C;
+    margin-left: 25px;
 }
