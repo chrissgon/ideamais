@@ -5,6 +5,7 @@
 html,
 body {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 html,
@@ -121,7 +122,6 @@ a {
 body {
   position: relative;
   font-family: "Montserrat";
-  overflow-x: hidden;
 }
 
 ol,
