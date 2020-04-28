@@ -4,7 +4,22 @@ $(".btn-mobile").click(function () {
   $(".menu-mobile").addClass("active");
 });
 
-$(".container-menu").click(function () {
+$(document).click(function (e) {
+  menu = $(".menu-mobile");
+  let btn = $(".btn-mobile");
+
+  if (
+    !menu.is(e.target) &&
+    menu.has(e.target).length === 0 &&
+    !btn.is(e.target) &&
+    btn.has(e.target).length === 0
+  ) {
+    $(".menu-mobile").removeClass("active");
+    $(".container-menu").fadeOut();
+  }
+});
+
+$(".menu-mobile a").click(function () {
   $(".menu-mobile").removeClass("active");
   $(".container-menu").fadeOut();
 });
