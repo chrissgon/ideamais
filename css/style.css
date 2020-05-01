@@ -160,29 +160,144 @@
 }
 
 /* Sobre */
-.sobre{
-  
-}
+.sobre {}
 
 /* Serviços */
-.servicos{
-
-}
+.servicos {}
 
 /* Cases */
-.cases{
+.cases {
+  width: 100%;
+  position: relative;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 150px;
+}
 
+.cases .titulo {
+  width: 100%;
+  height: 110px;
+  color: #2e4f66;
+  font-size: 1.8rem;
+  text-align: center;
+  line-height: 100px;
+  background: url("../img/bg_titulo.svg");
+  background-repeat: no-repeat;
+  background-size: 120px;
+  background-position: 45% 0%;
+  margin-bottom: -75px;
+}
+
+/* illustration */
+.cases .illustration {
+  width: 50%;
+  transform: translateX(80px);
+}
+
+/* avaliacao */
+.cases .avaliacao {
+  width: 50%;
+  padding-left: 100px;
+}
+
+/* descricao */
+.cases .avaliacao .descricao {
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+/* foto */
+.cases .avaliacao .descricao .foto {
+  background: url("../img/bg_foto.svg") no-repeat;
+  background-size: cover;
+  padding: 40px 30px 30px 40px;
+}
+
+.cases .avaliacao .descricao .foto img {
+  width: 75px;
+}
+
+/* info */
+.cases .avaliacao .descricao .info {
+  margin-left: 25px;
+}
+
+.cases .avaliacao .descricao .info .nome {
+  color: #2e4f66;
+  font-size: 1.8rem;
+}
+
+.cases .avaliacao .descricao .info .nome.active {
+  animation: comentarioCases .3s ease;
+}
+
+.cases .avaliacao .descricao .info .cargo {
+  color: #2e4f66;
+  font-weight: 500;
+}
+
+.cases .avaliacao .descricao .info .cargo.active {
+  animation: comentarioCases .4s ease;
+}
+
+.cases .avaliacao .comentario {
+  width: 100%;
+}
+
+.cases .avaliacao .comentario p {
+  color: #2e4f66;
+  text-align: justify;
+  padding: 0 30px;
+}
+
+.cases .avaliacao .comentario p.active {
+  animation: comentarioCases .6s ease;
+}
+
+.cases .avaliacao .comentario::before,
+.cases .avaliacao .comentario::after {
+  content: '"';
+  font-family: "Engravers MT";
+  font-size: 3rem;
+  line-height: 0;
+}
+
+.cases .avaliacao .comentario::after {
+  transform: translateX(95%);
+}
+
+/* btn-case */
+.btn-case {
+  width: 55px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  margin: 50px 0 0 25px;
+}
+
+.btn-case img {
+  position: absolute;
+  width: 100%;
+}
+
+.btn-case i {
+  color: #fff;
+  z-index: 2;
 }
 
 /* Orçamento */
-.orcamento{
-
-}
+.orcamento {}
 
 /* Contato */
-.contato{
-
-}
+.contato {}
 
 /* MEDIAS */
 @media (max-width: 1200px) {
@@ -319,5 +434,17 @@
   100% {
     transform: scale(1);
     background-color: rgba(0, 0, 0, 0.05);
+  }
+}
+
+@keyframes comentarioCases {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }

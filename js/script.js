@@ -23,3 +23,61 @@ $(".menu-mobile a").click(function () {
   $(".menu-mobile").removeClass("active");
   $(".container-menu").fadeOut();
 });
+
+// Cases
+cont = 0;
+$(".btn-case").click(function () {
+  // Desabilita btn
+  $(this).prop("disabled", true);
+
+  cont++;
+
+  // Array com dados
+  arrDados = {
+    [0]: {
+      foto: "foto_1.png",
+      nome: "Evelyn Ford",
+      cargo: "Gerente da Bayer",
+      comentario:
+        "A demasiada preocupação para a satisfação de seus clientes são claramente uma marca da empresa e me sinto completamente satisfeita com o resultado do projeto.",
+    },
+    [1]: {
+      foto: "foto_2.png",
+      nome: "John Lock",
+      cargo: "Presidente da Facebook",
+      comentario:
+        "Grande seriedade e compentência, além de profissionalismo. Percebe-se a preocupação para com a satisfação dos clientes.",
+    },
+    [2]: {
+      foto: "foto_3.png",
+      nome: "Cintya Magnoria",
+      cargo: "CEO da Google",
+      comentario:
+        "Incrível trabalho, utilizam a criatividade acima de tudo. Elaboram soluções viáveis e de fácil implementação de forma simples e objetiva; fica evidente o seu profissionalismo.",
+    },
+  };
+
+  // Verifica se contagem excedeu
+  if (cont == Object.keys(arrDados).length) {
+    cont = 0;
+  }
+
+  // Insere valores
+  $(".cases .descricao .foto").html(`<img src="img/${arrDados[cont].foto}">`);
+  $(".cases .info .nome").html(arrDados[cont].nome);
+  $(".cases .info .cargo").html(arrDados[cont].cargo);
+  $(".cases .comentario p").html(arrDados[cont].comentario);
+
+  // Animacoes
+  $(".cases .info .nome").addClass("active");
+  $(".cases .info .cargo").addClass("active");
+  $(".cases .comentario p").addClass("active");
+
+  setTimeout(() => {
+    $(".cases .info .nome").removeClass("active");
+    $(".cases .info .cargo").removeClass("active");
+    $(".cases .comentario p").removeClass("active");
+    // Habilita btn
+    $(".btn-case").prop("disabled", false);
+  }, 1000);
+});
