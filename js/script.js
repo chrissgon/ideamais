@@ -1,3 +1,13 @@
+// INICIADO AO CARREGAR O DOCUMENTO
+var tempcases;
+
+$(document).ready(function () {
+  // Temporizado de cases
+  tempcases = setInterval(() => {
+    animateCases();
+  }, 5000);
+});
+
 // MENU MOBILE
 $(".btn-mobile").click(function () {
   $(".container-menu").fadeIn(100);
@@ -27,8 +37,12 @@ $(".menu-mobile a").click(function () {
 // Cases
 cont = 0;
 $(".btn-case").click(function () {
+  animateCases();
+});
+
+function animateCases() {
   // Desabilita btn
-  $(this).prop("disabled", true);
+  $(".btn-case").prop("disabled", true);
 
   cont++;
 
@@ -69,15 +83,28 @@ $(".btn-case").click(function () {
   $(".cases .comentario p").html(arrDados[cont].comentario);
 
   // Animacoes
+  $(".cases .descricao .foto").addClass("active");
   $(".cases .info .nome").addClass("active");
   $(".cases .info .cargo").addClass("active");
   $(".cases .comentario p").addClass("active");
 
   setTimeout(() => {
+    $(".cases .descricao .foto").removeClass("active");
     $(".cases .info .nome").removeClass("active");
     $(".cases .info .cargo").removeClass("active");
     $(".cases .comentario p").removeClass("active");
     // Habilita btn
     $(".btn-case").prop("disabled", false);
   }, 1000);
+}
+
+$(".cases .avaliacao").hover(function () {
+  clearInterval(tempcases);
+});
+
+$(".cases .avaliacao").mouseleave(function () {
+  // Temporizado de cases
+  tempcases = setInterval(() => {
+    animateCases();
+  }, 5000);
 });

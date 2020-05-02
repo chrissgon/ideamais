@@ -198,7 +198,7 @@
 /* avaliacao */
 .cases .avaliacao {
   width: 50%;
-  padding-left: 100px;
+  padding-left: 75px;
 }
 
 /* descricao */
@@ -220,27 +220,37 @@
   width: 75px;
 }
 
+.cases .avaliacao .descricao .foto.active {
+  animation: fotoCases 0.3s ease;
+}
+
 /* info */
 .cases .avaliacao .descricao .info {
   margin-left: 25px;
 }
 
 .cases .avaliacao .descricao .info .nome {
+  width: 100%;
   color: #2e4f66;
   font-size: 1.8rem;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .cases .avaliacao .descricao .info .nome.active {
-  animation: comentarioCases .3s ease;
+  animation: textoCases 0.3s ease;
 }
 
 .cases .avaliacao .descricao .info .cargo {
+  width: 100%;
   color: #2e4f66;
   font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .cases .avaliacao .descricao .info .cargo.active {
-  animation: comentarioCases .4s ease;
+  animation: textoCases 0.4s ease;
 }
 
 .cases .avaliacao .comentario {
@@ -254,7 +264,7 @@
 }
 
 .cases .avaliacao .comentario p.active {
-  animation: comentarioCases .6s ease;
+  animation: textoCases 0.6s ease;
 }
 
 .cases .avaliacao .comentario::before,
@@ -321,6 +331,11 @@
   .home .info .buttons {
     margin-top: 50px;
   }
+
+  /* Cases */
+  .cases .titulo {
+    margin-bottom: 25px;
+  }
 }
 
 /* MEDIAS */
@@ -371,6 +386,24 @@
   .home .info .buttons a {
     padding: 12px 25px;
   }
+
+  /* Cases */
+  .cases {
+    flex-direction: column;
+  }
+
+  /* illustration */
+  .cases .illustration {
+    width: 70%;
+    transform: none;
+    margin: -50px 0 -100px 0;
+  }
+
+  /* avaliação */
+  .cases .avaliacao {
+    width: 100%;
+    padding: 50px 25px;
+  }
 }
 
 @media (max-width: 700px) {
@@ -402,6 +435,72 @@
   /* buttons */
   .home .info .buttons a {
     padding: 12px 20px;
+  }
+
+  /* Cases */
+  .cases .titulo {
+    font-size: 1.5rem;
+    background-size: 100px;
+    background-position: 25% 0%;
+  }
+
+  /* illustration */
+  .cases .illustration {
+    width: 100%;
+  }
+
+  /* avaliação */
+  /* descrição */
+  /* foto */
+  .cases .avaliacao .descricao .foto {
+    padding: 30px 20px 20px 30px;
+  }
+
+  .cases .avaliacao .descricao .foto img {
+    width: 60px;
+  }
+
+  /* info */
+  .cases .avaliacao .descricao .info .nome {
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+
+  .cases .avaliacao .descricao .info .cargo {
+    font-size: .9rem;
+  }
+
+  /* comentario */
+  .cases .avaliacao .comentario p {
+    font-size: .9rem;
+  }
+
+  .cases .avaliacao .comentario::before,
+  .cases .avaliacao .comentario::after {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+
+  /* Home */
+  /* info */
+  /* buttons */
+  .home .info .buttons {
+    flex-direction: column;
+  }
+
+  .home .info .buttons a {
+    width: 175px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home .info .buttons a:nth-child(2) {
+    width: 150px;
+    margin: 25px 0 0 0;
   }
 }
 
@@ -437,7 +536,7 @@
   }
 }
 
-@keyframes comentarioCases {
+@keyframes textoCases {
   from {
     opacity: 0;
     transform: translateX(-100px);
@@ -446,5 +545,17 @@
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes fotoCases {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
