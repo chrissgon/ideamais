@@ -7,12 +7,19 @@
     <!-- Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="idea mais, tecnologia, infraestrutura">
+    <meta name="description" content="Empresa de Tecnologia voltada para a criação de projeto de infraestrutura">
+    <meta name="author" content="Christopher Brendo">
+    <meta name="robots" content="index, follow">
     <!-- Links -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <!-- icone -->
+    <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
     <!-- Title -->
-    <title>Idea+</title>
+    <title>Idea Mais</title>
 </head>
 
 <!-- BODY -->
@@ -21,15 +28,15 @@
     <!-- Menu -->
     <nav class="menu">
         <!-- logo -->
-        <header class="logo">
+        <figure class="logo">
             <img src="img/logo.png" alt="Logo da Idea Mais">
-        </header>
+        </figure>
         <!-- links -->
         <article class="links">
             <a href="#home">Home</a>
-            <a>Quem Somos</a>
-            <a>Serviços</a>
-            <a>Contato</a>
+            <a href="#sobre">Quem Somos</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#contato">Contato</a>
         </article>
         <!-- btn mobile -->
         <a class="btn-mobile"><i class="material-icons">menu</i></a>
@@ -40,18 +47,18 @@
         <!-- Menu Mobile -->
         <nav class="menu-mobile">
             <a href="#home">Home</a>
-            <a>Quem Somos</a>
-            <a>Serviços</a>
-            <a>Contato</a>
+            <a href="#sobre">Quem Somos</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#contato">Contato</a>
         </nav>
     </div>
 
     <!-- Home -->
     <section class="home" id="home">
         <!-- illustration -->
-        <header class="illustration">
+        <figure class="illustration">
             <img src="img/img_home.svg" alt="Nossos serviços">
-        </header>
+        </figure>
         <!-- info -->
         <main class="info">
             <h3>Dúvidas sobre a infraestrutura da sua empresa?</h3>
@@ -69,21 +76,88 @@
 
     <!-- Sobre -->
     <section class="sobre" id="sobre">
-
+        <!-- logo -->
+        <figure class="logo">
+            <img src="img/idea_mais.gif" alt="Idea Mais animation">
+        </figure>
+        <!-- info -->
+        <article class="info">
+            <p>O nome <strong>Idea Mais</strong> surgiu para representar a capacidade da nossa equipe de transformar
+                ideias em cases de sucessos, com inovação e profissionalismo.</p>
+        </article>
+        <!-- topicos -->
+        <section class="topicos">
+            <!-- topico -->
+            <article class="topico">
+                <!-- icone -->
+                <figure class="icone">
+                    <img src="img/mission.svg" alt="Missão da Idea Mais">
+                </figure>
+                <!-- descricao -->
+                <article class="descricao">
+                    <h3>Missão</h3>
+                    <p>Inovar as áreas de infraestrutura de TI, visando o aumento da produtivade e qualiade de serviço.
+                    </p>
+                </article>
+            </article>
+            <!-- topico -->
+            <article class="topico">
+                <!-- icone -->
+                <figure class="icone">
+                    <img src="img/eye.svg" alt="Visão da Idea Mais">
+                </figure>
+                <!-- descricao -->
+                <article class="descricao">
+                    <h3>Visão</h3>
+                    <p>Ampliar nosso segmento, visando a inovação, projetando e implantando infraestruturas para empresa
+                        de diversos setores.
+                    </p>
+                </article>
+            </article>
+            <!-- topico -->
+            <article class="topico">
+                <!-- icone -->
+                <figure class="icone">
+                    <img src="img/team.svg" alt="Valores da Idea Mais">
+                </figure>
+                <!-- descricao -->
+                <article class="descricao">
+                    <h3>Valores</h3>
+                    <p>Confiança, qualidade, respeito, profissionalismo e inovação.
+                    </p>
+                </article>
+            </article>
+        </section>
     </section>
 
     <!-- Servicos -->
     <section class="servicos" id="servicos">
+        <h1 class="titulo">Serviços</h1>
+        <!-- illustration -->
+        <figure class="illustration">
+            <img src="img/img_servico_1.svg" alt="Serviço de Hardwares e Sistemas">
+        </figure>
+        <!-- descricao -->
+        <article class="descricao">
+            <h4 class="subtitulo">Hardwares e Sistemas</h4>
+            <p class="comentario">Definimos os hardwares e SO que mais se adeque ao tipo de serviço prestado, para que
+                todo e qualquer tipo
+                de sistema utilizado possa ter compatibilidade e ser exercido.</p>
 
+            <!-- container-btn -->
+            <div class="container-btn">
+                <button class="btn-servicos"><i class="material-icons">keyboard_arrow_right</i></button>
+            </div>
+        </article>
     </section>
 
     <!-- Cases -->
     <section class="cases" id="cases">
         <h1 class="titulo">Nossos Cases</h1>
         <!-- illustration -->
-        <header class="illustration">
+        <figure class="illustration">
             <img src="img/img_cases.svg" alt="Nossos cases">
-        </header>
+        </figure>
         <!-- avaliação -->
         <article class="avaliacao">
             <!-- descrição -->
@@ -103,26 +177,79 @@
                 <p>A demasiada preocupação para a satisfação de seus clientes são claramente uma marca da empresa e me
                     sinto completamente satisfeita com o resultado do projeto</p>
             </article>
-            <!-- btn-case -->
-            <button class="btn-case">
-                <img src="img/bg_btn.svg">
-                <i class="material-icons">arrow_forward</i>
-            </button>
+            <!-- container-btn -->
+            <div class="container-btn">
+                <button class="btn-cases"><i class="material-icons">keyboard_arrow_right</i></button>
+            </div>
         </article>
     </section>
 
     <!-- Orçamento -->
     <section class="orcamento" id="orcamento">
-
+        <!-- illustration -->
+        <figure class="illustration">
+            <img src="img/img_orcamento.svg" alt="Faça seu orçamento com a Idea Mais">
+        </figure>
+        <!-- info -->
+        <article class="info">
+            <h1 class="titulo">Crie seu orçamento</h1>
+            <p>Nossa equipe irá garantir o sucesso do seu projeto e empresa.</p>
+            <!-- input -->
+            <div class="input">
+                <input type="email" name="email" id="email" placeholder="Email">
+                <!-- container-btn -->
+                <div class="container-btn">
+                    <a class="btn-orcamento"><i class="material-icons">send</i></a>
+                </div>
+            </div>
+        </article>
     </section>
 
     <!-- Contato -->
     <section class="contato" id="contato">
-
+        <!-- illustration -->
+        <figure class="illustration">
+            <img src="img/img_contato.svg" alt="Entre em contato com a Idea Mais">
+        </figure>
+        <!-- container -->
+        <article class="container">
+            <h1 class="titulo">Tire suas dúvidas</h1>
+            <div class="input-group">
+                <input type="email" name="email" id="email" placeholder="Email">
+            </div>
+            <div class="input-group">
+                <input type="text" name="telefone" id="telefone" placeholder="Telefone">
+                <label class="alerta" for="telefone">Opcional</label>
+            </div>
+            <div class="input-group">
+                <textarea name="mensagem" id="mensagem" placeholder="Mensagem"></textarea>
+                <label class="alerta" for="telefone">255</label>
+            </div>
+            <!-- container-btn -->
+            <div class="container-btn">
+                <a class="btn-contato">Enviar</a>
+            </div>
+        </article>
     </section>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- midias -->
+        <article class="midias">
+            <a href="#"><i class="material-icons">mail</i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="material-icons">phone</i></a>
+            <a href="#"><i class="material-icons">map</i></a>
+        </article>
+        <!-- copyright -->
+        <article class="copyright">
+            <p>Idea Mais &copy - 2020</p>
+            <p>Todos os direitos reservados.</p>
+        </article>
+    </footer>
+
     <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 
